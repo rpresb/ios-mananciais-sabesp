@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		978871601ACABC70004C4208 /* Manancial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788715F1ACABC70004C4208 /* Manancial.swift */; };
 		97A74EF31ACA31F6002CB315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A74EF21ACA31F6002CB315 /* AppDelegate.swift */; };
 		97A74EF51ACA31F6002CB315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A74EF41ACA31F6002CB315 /* ViewController.swift */; };
 		97A74EF81ACA31F6002CB315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97A74EF61ACA31F6002CB315 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9788715F1ACABC70004C4208 /* Manancial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manancial.swift; sourceTree = "<group>"; };
 		97A74EED1ACA31F6002CB315 /* ios-mananciais-sabesp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mananciais-sabesp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A74EF11ACA31F6002CB315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97A74EF21ACA31F6002CB315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				97A74EF21ACA31F6002CB315 /* AppDelegate.swift */,
+				9788715F1ACABC70004C4208 /* Manancial.swift */,
 				97A74EF41ACA31F6002CB315 /* ViewController.swift */,
 				97A74EF61ACA31F6002CB315 /* Main.storyboard */,
 				97A74EF91ACA31F6002CB315 /* Images.xcassets */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A74EF51ACA31F6002CB315 /* ViewController.swift in Sources */,
+				978871601ACABC70004C4208 /* Manancial.swift in Sources */,
 				97A74EF31ACA31F6002CB315 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				97A74F0E1ACA31F6002CB315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97A74F0F1ACA31F6002CB315 /* Build configuration list for PBXNativeTarget "ios-mananciais-sabespTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				97A74F111ACA31F6002CB315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
