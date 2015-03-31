@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
+    @IBOutlet weak var page:UIPageControl!
+    @IBOutlet weak var level:UIView!
+    
+    var mananciais: NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,21 +43,11 @@ class ViewController: UIViewController {
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(baseURL!, completionHandler: { (location: NSURL!, response:NSURLResponse!, error: NSError!) -> Void in
             if (error == nil) {
                 let dataObject = NSData(contentsOfURL: location)
-                let mananciais: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSArray
+                self.mananciais = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSArray
                 
-                let manancial = Manancial(manancialDic: mananciais[0] as NSDictionary)
-
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.nameLabel.text = "\(manancial.name)"
-                    self.volumeLabel.text = "\(manancial.volume)"
-                    self.dayLabel.text = "\(manancial.rainDay)"
-                    self.monthLabel.text = "\(manancial.rainMonth)"
-                    self.avgLabel.text = "\(manancial.rainAvg)"
-                    
-                    self.volumeLabel.hidden = false
-                    self.dayLabel.hidden = false
-                    self.monthLabel.hidden = false
-                    self.avgLabel.hidden = false
+                    self.page.numberOfPages = self.mananciais.count
+                    self.showPage(0)
                 })
             } else {
                 NSLog("%@", error)
@@ -72,7 +66,39 @@ class ViewController: UIViewController {
         
         downloadTask.resume()
     }
+    
+    func showPage(index:Int) {
+        let manancial = Manancial(manancialDic: self.mananciais[index] as NSDictionary)
+        
+        self.nameLabel.text = "\(manancial.name)"
+        self.volumeLabel.text = "\(manancial.volume)"
+        self.dayLabel.text = "\(manancial.rainDay)"
+        self.monthLabel.text = "\(manancial.rainMonth)"
+        self.avgLabel.text = "\(manancial.rainAvg)"
+        
+        self.volumeLabel.hidden = false
+        self.dayLabel.hidden = false
+        self.monthLabel.hidden = false
+        self.avgLabel.hidden = false
+        
+        (0 , 0, self.view.frame.width, self.view.frame.height * 0.7)
+        
+        var volume:NSDecimalNumber = NSDecimalNumber(string: manancial.volume.stringByReplacingOccurrencesOfString(" %", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(",", withString: ".", options: NSStringCompareOptions.LiteralSearch, range: nil))
+        
+        var pixel = CGFloat(volume) / 100 * self.view.frame.size.height
 
+        let y:CGFloat = self.view.frame.size.height - pixel;
+        
+        NSLog("%@", pixel)
+        NSLog("%@", y);
+
+        self.level.frame.origin.y = y
+        self.level.frame.size.height = pixel
+    }
+
+    @IBAction func pageChanged() {
+        showPage(page.currentPage);
+    }
 
 }
 

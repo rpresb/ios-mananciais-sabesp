@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-co-5sv">
+                                <rect key="frame" x="0.0" y="588" width="414" height="148"/>
+                                <color key="backgroundColor" red="0.23878879676870748" green="0.010382121598639419" blue="0.46719547193877553" alpha="0.13" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Manancial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LL-9Y-7t7">
                                 <rect key="frame" x="16" y="61" width="382" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -72,19 +76,18 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IM2-mI-hgy">
-                                <rect key="frame" x="155" y="654" width="105" height="93"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-fG-y3r">
                                 <rect key="frame" x="16" y="504" width="99" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-co-5sv">
-                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
-                                <color key="backgroundColor" red="0.23530668277464073" green="0.27704012458083682" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IM2-mI-hgy">
+                                <rect key="frame" x="155" y="654" width="105" height="93"/>
+                                <connections>
+                                    <action selector="pageChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="3qq-uD-ff5"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.42916989290000002" green="0.68437823939999998" blue="0.99257224799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -244,6 +247,8 @@
                                 <exclude reference="huu-8S-gIa"/>
                                 <exclude reference="iSs-Fp-KWA"/>
                                 <exclude reference="nXl-Ss-V0P"/>
+                                <exclude reference="cDO-BV-V9T"/>
+                                <exclude reference="rB5-UA-Zwz"/>
                                 <exclude reference="2yX-ff-pqR"/>
                                 <exclude reference="FGH-LN-S0W"/>
                                 <exclude reference="OTS-fs-O8a"/>
@@ -257,8 +262,6 @@
                                 <exclude reference="gI8-JL-gpf"/>
                                 <exclude reference="kjx-fo-RUH"/>
                                 <exclude reference="tlP-nI-R42"/>
-                                <exclude reference="cDO-BV-V9T"/>
-                                <exclude reference="rB5-UA-Zwz"/>
                                 <exclude reference="dgb-OS-78s"/>
                                 <exclude reference="oDv-Gb-S6W"/>
                             </mask>
@@ -268,8 +271,10 @@
                     <connections>
                         <outlet property="avgLabel" destination="Vni-p5-vz7" id="ISQ-hv-6CR"/>
                         <outlet property="dayLabel" destination="mFL-qS-56D" id="M4l-MZ-k36"/>
+                        <outlet property="level" destination="fVu-co-5sv" id="uyA-UK-Lvl"/>
                         <outlet property="monthLabel" destination="YxR-S0-qmX" id="Okb-yN-VOy"/>
                         <outlet property="nameLabel" destination="0LL-9Y-7t7" id="Vh3-ZV-o25"/>
+                        <outlet property="page" destination="IM2-mI-hgy" id="x8N-d3-bCp"/>
                         <outlet property="volumeLabel" destination="pe3-n9-h4Y" id="fBe-Qf-pTn"/>
                     </connections>
                 </viewController>
