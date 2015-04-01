@@ -19,8 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-co-5sv">
-                                <rect key="frame" x="0.0" y="588" width="414" height="148"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <color key="backgroundColor" red="0.23878879676870748" green="0.010382121598639419" blue="0.46719547193877553" alpha="0.13" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Manancial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LL-9Y-7t7">
                                 <rect key="frame" x="16" y="61" width="382" height="64"/>
@@ -83,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IM2-mI-hgy">
-                                <rect key="frame" x="155" y="654" width="105" height="93"/>
+                                <rect key="frame" x="0.0" y="643" width="414" height="37"/>
                                 <connections>
                                     <action selector="pageChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="3qq-uD-ff5"/>
                                 </connections>
@@ -124,6 +136,7 @@
                             <constraint firstItem="IM2-mI-hgy" firstAttribute="top" secondItem="YxR-S0-qmX" secondAttribute="bottom" constant="81" id="M23-5j-w2a"/>
                             <constraint firstItem="mFL-qS-56D" firstAttribute="top" secondItem="vE7-fG-y3r" secondAttribute="bottom" constant="8" id="Mef-yg-cQV"/>
                             <constraint firstAttribute="width" secondItem="0LL-9Y-7t7" secondAttribute="width" id="MoQ-rF-eHa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IM2-mI-hgy" secondAttribute="bottom" id="N41-Fg-xTr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IM2-mI-hgy" secondAttribute="trailing" constant="138" id="NVW-4C-D2W"/>
                             <constraint firstItem="bYu-Tw-KUR" firstAttribute="top" secondItem="lbf-lj-evS" secondAttribute="bottom" constant="13" id="OHG-as-8Em"/>
                             <constraint firstItem="Vni-p5-vz7" firstAttribute="leading" secondItem="mFL-qS-56D" secondAttribute="trailing" constant="133" id="OTS-fs-O8a"/>
@@ -133,6 +146,7 @@
                             <constraint firstItem="0LL-9Y-7t7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TCm-Yo-0dI"/>
                             <constraint firstItem="lbf-lj-evS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="TxL-ER-wIb"/>
                             <constraint firstItem="IM2-mI-hgy" firstAttribute="top" secondItem="YxR-S0-qmX" secondAttribute="bottom" constant="87" id="UC5-uv-v9e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IM2-mI-hgy" secondAttribute="trailing" constant="-16" id="UgD-LL-FfE"/>
                             <constraint firstItem="pe3-n9-h4Y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="71:75" id="UqI-1w-Sne"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bYu-Tw-KUR" secondAttribute="trailing" constant="4" id="V0t-ka-LqG"/>
                             <constraint firstItem="Vni-p5-vz7" firstAttribute="top" secondItem="bYu-Tw-KUR" secondAttribute="bottom" constant="8" id="W8y-GR-NMo"/>
@@ -189,6 +203,7 @@
                             <constraint firstItem="IM2-mI-hgy" firstAttribute="top" secondItem="Vni-p5-vz7" secondAttribute="bottom" constant="87" id="tlP-nI-R42"/>
                             <constraint firstItem="m2j-6M-gW7" firstAttribute="leading" secondItem="mFL-qS-56D" secondAttribute="trailing" constant="8" id="tqm-YJ-aSF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lbf-lj-evS" secondAttribute="trailing" constant="62" id="vVM-ya-JNr"/>
+                            <constraint firstItem="IM2-mI-hgy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="vi6-od-3m9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vni-p5-vz7" secondAttribute="trailing" constant="4" id="viK-oi-Nwh"/>
                             <constraint firstItem="pe3-n9-h4Y" firstAttribute="top" secondItem="OzG-Is-fsf" secondAttribute="bottom" constant="26" id="xe3-hB-6ZL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YxR-S0-qmX" secondAttribute="trailing" constant="146" id="yII-bc-Lcg"/>
@@ -198,6 +213,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="cDO-BV-V9T"/>
+                                <exclude reference="rB5-UA-Zwz"/>
                                 <exclude reference="MoQ-rF-eHa"/>
                                 <exclude reference="biq-I4-buf"/>
                                 <exclude reference="c9H-DK-RYV"/>
@@ -247,27 +264,32 @@
                                 <exclude reference="huu-8S-gIa"/>
                                 <exclude reference="iSs-Fp-KWA"/>
                                 <exclude reference="nXl-Ss-V0P"/>
-                                <exclude reference="cDO-BV-V9T"/>
-                                <exclude reference="rB5-UA-Zwz"/>
                                 <exclude reference="2yX-ff-pqR"/>
                                 <exclude reference="FGH-LN-S0W"/>
                                 <exclude reference="OTS-fs-O8a"/>
                                 <exclude reference="W8y-GR-NMo"/>
                                 <exclude reference="kAL-l1-Vct"/>
                                 <exclude reference="viK-oi-Nwh"/>
+                                <exclude reference="2my-oV-48b"/>
                                 <exclude reference="94d-cA-s9R"/>
+                                <exclude reference="KFW-Vk-5Uw"/>
+                                <exclude reference="M23-5j-w2a"/>
+                                <exclude reference="NVW-4C-D2W"/>
                                 <exclude reference="Rkf-QY-zAf"/>
                                 <exclude reference="UC5-uv-v9e"/>
                                 <exclude reference="Z3q-qj-h95"/>
+                                <exclude reference="ePR-6O-dBd"/>
                                 <exclude reference="gI8-JL-gpf"/>
                                 <exclude reference="kjx-fo-RUH"/>
+                                <exclude reference="px1-Km-5JW"/>
                                 <exclude reference="tlP-nI-R42"/>
+                                <exclude reference="7Og-cG-dAC"/>
                                 <exclude reference="dgb-OS-78s"/>
                                 <exclude reference="oDv-Gb-S6W"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="avgLabel" destination="Vni-p5-vz7" id="ISQ-hv-6CR"/>
                         <outlet property="dayLabel" destination="mFL-qS-56D" id="M4l-MZ-k36"/>

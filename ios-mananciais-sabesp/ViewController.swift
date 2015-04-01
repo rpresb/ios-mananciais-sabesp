@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         dayLabel.hidden = true
         monthLabel.hidden = true
         avgLabel.hidden = true
+        level.hidden = true
 
         loadData();
     }
@@ -57,9 +58,12 @@ class ViewController: UIViewController {
                 self.presentViewController(networkIssueController, animated: true, completion: nil)
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                    self.refreshActivityIndicatior.hidden = true
-//                    self.refreshActivityIndicatior.stopAnimating()
-//                    self.refreshButton.hidden = false
+                    self.nameLabel.text = "Erro"
+                    self.volumeLabel.hidden = true
+                    self.dayLabel.hidden = true
+                    self.monthLabel.hidden = true
+                    self.avgLabel.hidden = true
+                    self.level.hidden = true
                 })
             }
         })
@@ -80,8 +84,7 @@ class ViewController: UIViewController {
         self.dayLabel.hidden = false
         self.monthLabel.hidden = false
         self.avgLabel.hidden = false
-        
-        (0 , 0, self.view.frame.width, self.view.frame.height * 0.7)
+        self.level.hidden = false
         
         var volume:NSDecimalNumber = NSDecimalNumber(string: manancial.volume.stringByReplacingOccurrencesOfString(" %", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(",", withString: ".", options: NSStringCompareOptions.LiteralSearch, range: nil))
         
@@ -89,9 +92,6 @@ class ViewController: UIViewController {
 
         let y:CGFloat = self.view.frame.size.height - pixel;
         
-        NSLog("%@", pixel)
-        NSLog("%@", y);
-
         self.level.frame.origin.y = y
         self.level.frame.size.height = pixel
     }
